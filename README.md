@@ -1,10 +1,7 @@
 <h1>
-  <img src="https://github.com/YuliiaNisha/images/blob/99649a30cef8beb0bb4728d4afd4801861e0b408/icon-black150height.png" style="vertical-align: middle;">
-  Online Bookstore API 
+  <img src="https://github.com/YuliiaNisha/images/blob/c7f4ba538e58973789d8ed363dc7a5e329ba8c13/icon-round-70height.png" style="vertical-align: middle;">
+  <strong>Online Bookstore API</strong>
 </h1>
-
-
-# 📚 Online Bookstore API
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/YuliiaNisha/online-bookstore)
 [![Java](https://img.shields.io/badge/Java-17-orange)](https://www.oracle.com/java/)
@@ -12,9 +9,6 @@
 [![Swagger](https://img.shields.io/badge/Swagger-API-blueviolet)](http://localhost:8080/swagger-ui.html)
 [![GitHub issues](https://img.shields.io/github/issues/YuliiaNisha/online-bookstore)](https://github.com/YuliiaNisha/online-bookstore/issues)
 
-<p align="center">
-  <img src="https://github.com/YuliiaNisha/images/blob/99649a30cef8beb0bb4728d4afd4801861e0b408/icon-black150height.png">
-</p>
 
 
 > Simple, efficient, and secure — the basic functionality of an online bookstore in one API.
