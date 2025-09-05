@@ -14,6 +14,12 @@
 > Simple, efficient, and secure — the basic functionality of an online bookstore in one API.
 
 ---
+## Table of Contents
+- [Description](#description)
+- [Controllers](#controllers)
+- [Setup & Usage](#setup--usage)
+- [Challenges & Solutions](#challenges--solutions)
+- [API Documentation](#api-documentation)
 
 ## Description
 
@@ -55,3 +61,21 @@ All endpoints can be divided into three groups:
 1. Create a `.env` file in the project root.  
 2. Copy `.env.sample` into your `.env` file.  
 3. Fill in the required credentials (database URL, username, password, etc.).
+
+---
+
+## Challenges & Solutions
+
+### Restricting Access to Endpoints
+#### Challenge: 
+Certain endpoints needed to be accessible only to users with role ADMIN
+#### Solution: 
+Integrated Spring Security with JWT tokens and role-based access.
+
+### Entity-to-DTO Mapping
+#### Challenge: 
+Default MapStruct mapping methods were insufficient for converting some entities to DTOs and back.
+#### Solution: 
+Implemented custom mapping methods.
+
+---
