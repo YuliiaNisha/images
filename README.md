@@ -18,7 +18,7 @@
 - [Description](#description)
 - [Technologies & Tools](#technologies--tools)
 - [Controllers](#controllers)
-- [How to use](#how--to--use)
+- [How to use](#how-to-use)
 - [Challenges & Solutions](#challenges--solutions)
 - [API Documentation](#api-documentation)
 
@@ -56,12 +56,55 @@ All endpoints can be divided into three groups:
 
 ## How to use
 ### 1. Run Locally
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/online-bookstore.git
+   cd online-bookstore
+   ```
+2. Configure the database in src/main/resources/application.properties
 
-  
-### Environment Variables
-1. Create a `.env` file in the project root.  
-2. Copy `.env.sample` into your `.env` file.  
-3. Fill in the required credentials (database URL, username, password, etc.).
+3. Configure Environment Variables
+  - Create a `.env` file in the project root.  
+  - Copy `.env.sample` into your `.env` file.  
+  - Fill in the required credentials (database URL, username, password, etc.).
+
+4. Build the project
+```bash
+mvn clean install
+```
+
+5. Run the application
+```bash
+mvn spring-boot:run
+```
+
+or
+```bash
+java -jar target/bookstore-0.0.1-SNAPSHOT.jar
+```
+
+6. Open Swagger UI in your browser:
+
+http://localhost:8080/swagger-ui/index.html
+
+### 2. Use the AWS Deployment
+
+The project is hosted on AWS so you can test the API directly using the deployed Swagger UI:
+
+👉 http://ec2-16-171-2-102.eu-north-1.compute.amazonaws.com/api/swagger-ui/index.html
+
+From here you can:
+
+Register a new user
+
+Log in and get a JWT token
+
+Browse/search books
+
+Place and manage orders
+
+Try out all endpoints directly in the browser
+
 
 ---
 
