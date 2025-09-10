@@ -52,6 +52,8 @@ All endpoints can be divided into three groups:
 1. **Publicly accessible** (AuthenticationController)  
 2. Accessible only to users with the **ADMIN role**  
 3. Accessible only to users with the **USER role**
+
+https://web.postman.co/workspace/My-Workspace~49ed7a22-2d52-45ef-8ca1-c68f46105379/collection/40367151-d5b4ff87-5102-4633-b53f-afb2a9a5b27e?action=share&source=copy-link&creator=40367151
 ---
 
 ## How to use
