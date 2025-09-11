@@ -18,6 +18,7 @@
 - [Description](#description)
 - [Technologies & Tools](#technologies--tools)
 - [Controllers](#controllers)
+- [Postman](#postman)
 - [How to use](#how-to-use)
 - [Challenges & Solutions](#challenges--solutions)
 - [API Documentation](#api-documentation)
@@ -53,7 +54,18 @@ All endpoints can be divided into three groups:
 2. Accessible only to users with the **ADMIN role**  
 3. Accessible only to users with the **USER role**
 
-https://web.postman.co/workspace/My-Workspace~49ed7a22-2d52-45ef-8ca1-c68f46105379/collection/40367151-d5b4ff87-5102-4633-b53f-afb2a9a5b27e?action=share&source=copy-link&creator=40367151
+## Postman  
+A Postman collection is available to simplify testing the API.  
+👉 [Open Online Bookstore Postman Collection](https://postman.co/workspace/My-Workspace~49ed7a22-2d52-45ef-8ca1-c68f46105379/collection/40367151-d5b4ff87-5102-4633-b53f-afb2a9a5b27e?action=share&creator=40367151)  
+
+How to use this Postman collection:  
+1. Click the link above.  
+2. Import the collection into your Postman app.  
+3. Run requests directly against either:  
+   - **Local setup** (`http://localhost:8080/api`)  
+   - **AWS deployment** (`http://ec2-16-171-2-102.eu-north-1.compute.amazonaws.com/api`)  
+4. Authenticate by registering and logging in to get a JWT token.
+5. Go to the **Authorization** tab; choose **Bearer Token** as the Auth Type; paste the JWT token you received into the token field to access all protected endpoints. 
 ---
 
 ## How to use
@@ -72,7 +84,7 @@ https://web.postman.co/workspace/My-Workspace~49ed7a22-2d52-45ef-8ca1-c68f461053
 
 4. Build the project
 ```bash
-mvn clean install
+mvn clean package
 ```
 
 5. Run the application
