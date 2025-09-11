@@ -1,15 +1,11 @@
-<h1>
-  <img src="https://github.com/YuliiaNisha/images/blob/c7f4ba538e58973789d8ed363dc7a5e329ba8c13/icon-round-70height.png" style="vertical-align: middle;">
-  <strong>Online Bookstore API</strong>
-</h1>
+# ![Icon](https://raw.githubusercontent.com/YuliiaNisha/images/c7f4ba538e58973789d8ed363dc7a5e329ba8c13/icon-round-70height.png) Online Bookstore API
 
-![Java](https://img.shields.io/badge/Java-17-blue.svg)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.3-brightgreen)
-![Maven](https://img.shields.io/badge/Maven-3+-blueviolet)
-![MySQL](https://img.shields.io/badge/Database-MySQL-orange)
+![Java](https://img.shields.io/badge/Java-17-green.svg)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.3-green)
+![Maven](https://img.shields.io/badge/Maven-3+-green)
+![MySQL](https://img.shields.io/badge/Database-MySQL-green)
 ![JUnit](https://img.shields.io/badge/Tests-JUnit%205-green)
-![Testcontainers](https://img.shields.io/badge/Testcontainers-Enabled-informational)
-![Swagger](https://img.shields.io/badge/API-Swagger%20UI-lightgreen)
+![Swagger](https://img.shields.io/badge/API-Swagger%20UI-green)
 
 > Simple, efficient, and secure — the basic functionality of an online bookstore in one API.
 
@@ -19,12 +15,12 @@
 - [Technologies & Tools](#technologies--tools)
 - [Controllers](#controllers)
 - [Postman](#postman)
-- [How to use](#how-to-use)
+- [How to use the API](#how-to-use-the-api)
 - [Challenges & Solutions](#challenges--solutions)
 - [API Documentation](#api-documentation)
 
 ## Description
-Online Bookstore API is a **RESTful application** that provides the essential features of an online bookstore:  
+Online Bookstore API is a RESTful application that provides the essential features of an online bookstore:  
 - Browsing and searching for books  
 - Managing categories  
 - Placing orders  
@@ -54,6 +50,25 @@ All endpoints can be divided into three groups:
 2. Accessible only to users with the **ADMIN role**  
 3. Accessible only to users with the **USER role**
 
+| 🌐 PUBLIC Endpoints | 🔒 ADMIN Role Endpoints | 👤 USER Role Endpoints |
+|---------------------|-------------------------|---------------------|
+| Register         | Create Book          | Get Book By ID      |
+| Login            | Update Book          | Get All Books       |
+|                  | Delete Book          | Search for Books    |
+|                  | Create Category      | Get All Categories  |
+|                  | Update Category      | Get Category By ID  |
+|                  | Delete Category      | Get Books By Category ID |
+|                  | Update Order Status  | Create Order        |
+|                  |                      | Get All Orders      |
+|                  |                      | Get Order Items By Order ID |
+|                  |                      | Get Order Item By ID |
+|                  |                      | Get Shopping Cart |
+|                  |                      | Add Book To Cart |
+|                  |                      | Update Book Quantity in Cart |
+|                  |                      | Delete Book From Cart |
+
+---
+
 ## Postman  
 A Postman collection is available to simplify testing the API.  
 👉 [Open Online Bookstore Postman Collection](https://postman.co/workspace/My-Workspace~49ed7a22-2d52-45ef-8ca1-c68f46105379/collection/40367151-d5b4ff87-5102-4633-b53f-afb2a9a5b27e?action=share&creator=40367151)  
@@ -61,18 +76,21 @@ A Postman collection is available to simplify testing the API.
 How to use this Postman collection:  
 1. Click the link above.  
 2. Import the collection into your Postman app.  
-3. Run requests directly against either:  
-   - **Local setup** (`http://localhost:8080/api`)  
-   - **AWS deployment** (`http://ec2-16-171-2-102.eu-north-1.compute.amazonaws.com/api`)  
-4. Authenticate by registering and logging in to get a JWT token.
-5. Go to the **Authorization** tab; choose **Bearer Token** as the Auth Type; paste the JWT token you received into the token field to access all protected endpoints. 
+3. Run requests against http://localhost:8080/api   
+4. Authenticate by registering and/or logging in to get a JWT token.
+5. Go to the **Authorization** tab.
+6. Choose **Bearer Token** as the Auth Type.
+7. Paste the JWT token you received into the token field to access all protected endpoints.
+
+👉![Token Flow Diagram](https://raw.githubusercontent.com/YuliiaNisha/images/main/token-flow.png)
+
 ---
 
-## How to use
-### 1. Run Locally
+## How to use the API
+### Run Locally
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/online-bookstore.git
+   git clone https://github.com/YuliiaNisha/online-bookstore.git
    cd online-bookstore
    ```
 2. Configure the database in src/main/resources/application.properties
@@ -86,40 +104,9 @@ How to use this Postman collection:
 ```bash
 mvn clean package
 ```
-
 5. Run the application
-```bash
-mvn spring-boot:run
-```
-
-or
-```bash
-java -jar target/bookstore-0.0.1-SNAPSHOT.jar
-```
-
-6. Open Swagger UI in your browser:
-
-http://localhost:8080/swagger-ui/index.html
-
-### 2. Use the AWS Deployment
-
-The project is hosted on AWS so you can test the API directly using the deployed Swagger UI:
-
-👉 http://ec2-16-171-2-102.eu-north-1.compute.amazonaws.com/api/swagger-ui/index.html
-
-From here you can:
-
-Register a new user
-
-Log in and get a JWT token
-
-Browse/search books
-
-Place and manage orders
-
-Try out all endpoints directly in the browser
-
-
+   
+6. Open Swagger UI in your browser: http://localhost:8080/swagger-ui/index.html
 ---
 
 ## Challenges & Solutions
@@ -135,5 +122,4 @@ Integrated Spring Security with JWT tokens and role-based access.
 Default MapStruct mapping methods were insufficient for converting some entities to DTOs and back.
 #### Solution: 
 Implemented custom mapping methods.
-
 ---
