@@ -15,7 +15,7 @@
 - [Technologies & Tools](#technologies--tools)
 - [Controllers](#controllers)
 - [Postman](#postman)
-- [How to use the API](#how-to-use-the-api)
+- [How to use](#how-to-use)
 - [Challenges & Solutions](#challenges--solutions)
 - [API Documentation](#api-documentation)
 
@@ -82,11 +82,14 @@ How to use this Postman collection:
 6. Choose **Bearer Token** as the Auth Type.
 7. Paste the JWT token you received into the token field to access all protected endpoints.
 
-👉![Token Flow Diagram](https://raw.githubusercontent.com/YuliiaNisha/images/main/token-flow.png)
+![Token Flow Diagram](https://raw.githubusercontent.com/YuliiaNisha/images/main/token-flow.png)
+
+For a quick overview of how to use the Postman collection and test the API endpoints, watch this Loom video:  
+👉 [Watch the demo on Loom](https://www.loom.com/share/8afbfe7a809e4c9da0bd496bc78d1193?sid=2c4f6647-b0a5-4369-9837-2efef8414830)
 
 ---
 
-## How to use the API
+## How to use
 ### Run Locally
 1. Clone the repository
    ```bash
